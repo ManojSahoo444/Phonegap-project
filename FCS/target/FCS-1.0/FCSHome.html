@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="HandheldFriendly" content="true">
+<!--[if lt IE 9]>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="//code.jquery.com/jquery-2.0.3.js"></script>
+<!--<![endif]-->
+        <title>FCS Home</title>
+<!--        [if IE]
+            <link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        [endif]-->
+        <script type="text/javascript" charset="utf-8" src="js/frameworks/jquery-2.0.3.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/frameworks/datajs-1.1.1.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/frameworks/jquery-1.9.1.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/frameworks/jquery-ui-1.10.3.custom.js"></script>
+        <link href="stylesheets/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" charset="utf-8" src="js/gulfmark/Controller.js?version=1.0.0.2"></script>
+        <script type="text/javascript" charset="utf-8" src="js/frameworks/json2.js"></script>
+         <link href="stylesheets/invoice-home.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                    <link href="stylesheets/fonts.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                    <link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                   <link href="stylesheets/model.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+                   <link href="stylesheets/invoice-details.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+                    <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+                    <script type="text/javascript" charset="utf-8" src="js/frameworks/retina.js"></script>
+<!--                    <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>-->
+                    
+                    <script>
+                      
+                       $(function() {
+                         $( "#receiptDate" ).datepicker();
+                         $( "#format" ).change(function() {
+                         });
+                         });
+                         
+                    </script>
+                    <link href="stylesheets/screenC.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                    <style>
+                        #view { display: block; max-width: 800px; padding: 0; margin: 0; }
+
+#containerlist { display: block; 
+/*                 margin-top: 55px; */
+}
+#containerlist ul { }
+#containerlist ul a li { 
+	display: block;
+	width: 100%;
+/*	height: 90px;*/
+	border-bottom: 1px solid #b9b9b9;
+	border-top: 1px solid #f7f7f7;
+	background: #ebebeb;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff) to(#ebebeb));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ebebeb);
+  background-image:    -moz-linear-gradient(top, #ffffff, #ebebeb);
+  background-image:      -o-linear-gradient(top, #ffffff, #ebebeb);
+  background-image:         linear-gradient(top, #ffffff, #ebebeb); 
+}
+
+#containerlist ul a { display: block; position: relative; width: 100%; }
+#containerlist ul li h2 { font-size: 2.1em; line-height: 1.3em; font-weight: normal; letter-spacing: -0.03em; padding-top: 4px; color: #55678d; }
+#containerlist ul li p.desc { color: #555; font-family: Arial, sans-serif; font-size: 1.3em; line-height: 1.3em; white-space: nowrap; overflow: hidden; }
+
+#containerlist ul li .price { position: absolute; bottom: 10px; left: 90px; font-size: 1.2em; font-weight: bold; color: #6ea247; }
+
+#containerlist ul li img.thumbnail { 
+	background: #fff;
+	display: inline-block;
+	float: left;
+	padding: 2px;
+	margin-top: 6px;
+	margin-left: 5px;
+	margin-right: 8px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+#containerlist ul a:hover li h2 { color: #7287b1; }
+#containerlist ul a:hover li p.desc { color: #757575; }
+
+#containerlist ul a:hover li {
+background: #efefef;
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff) to(#efefef));
+background-image: -webkit-linear-gradient(top, #ffffff, #efefef);
+background-image:    -moz-linear-gradient(top, #ffffff, #efefef);
+background-image:      -o-linear-gradient(top, #ffffff, #efefef);
+background-image:         linear-gradient(top, #ffffff, #efefef);
+}
+
+@media only screen and (max-width: 480px) {
+	#containerlist ul li h2 { font-size: 1.75em; }
+	
+	#containerlist ul li img.thumbnail { margin-top: 2px; }
+}
+
+@media only screen and (max-width: 320px) {
+	#containerlist ul li p.desc { display: none; }
+}
+
+                    </style>
+                    
+</head>
+    <body class="bodyclass">
+      
+        <div class="section-loader"></div>
+        <img src="images/section-loader.gif" id="section-loader" style="display:none;">
+        
+                <section id="homeWrapper" class="wrapper">
+<!--                    <header class="main-header">
+                    <a href="https://nwdev.gulfmark.com:8080/ContainerApplication-1.0/index.html#appstore" class="appstore-btn">App Store</a>
+                    <h1 class="logo">Gyansys Offshore</h1>
+                    <a id="logOut" href='javascript:createAlertMessage("Logout","Are you sure you want to Logout?","logOut","confirm","e")' class="logut-btn">Logout</a>
+                    
+                    </header>-->
+                    <div class="info-bar" id="heading" style="text-align: center;">Home</div>
+                    <section class="content-area" style="">
+                        
+                        <div class="content-container clearfix" style="overflow-y: scroll;">
+                            <div style="padding-bottom: 2%;text-align: center;">
+                                    <img src="images/FCSLogo.png" alt="Smiley face" height="50" width="190">
+
+                                </div>
+<!--                                <div style="padding-bottom: 2%;text-align: center;">
+                                    <img src="images/child10.jpg" alt="Smiley face" height="100" style="width:100%;">
+
+                                </div>-->
+<!--                                <div style="padding-bottom: 2%;">-->
+                            <div class="scrollable-area" id="maindiv" style="height: initial;">
+
+                                
+                                <div>&nbsp;</div>
+<!--                                <div style="padding-bottom: 2%;text-align: center;">
+                                    <img src="images/FCSLogo.png" alt="Smiley face" height="50" width="190">
+
+                                </div>
+                                <div style="padding-bottom: 2%;text-align: center;">
+                                    <img src="images/child10.jpg" alt="Smiley face" height="100" style="width:100%;">
+
+                                </div>
+                                <div style="padding-bottom: 2%;">-->
+                                    <div id="view">
+<!--		<header>
+			<h1>Detail List UI</h1>
+		</header>-->
+	
+		<div id="containerlist">
+			<ul>
+				<!-- row 01 -->
+				<a target="_blank" href="http://www.fultonschools.org/en" style="text-decoration: none;"><li class="clearfix">
+						<img src="images/beautiful-villa-ocean.png" alt="thumb" class="thumbnail">
+						<h2>Fulton County</h2>
+<!--						<p class="desc">Rental located in Pheonix, AZ. 2 bedrooms 1.5 baths. </p>
+						
+						<span class="price">$2,650/month</span>-->
+				</li></a>
+				
+				<!-- row 02 -->
+				<a href="javascript:FultonCountypdf()" style="text-decoration: none;"><li class="clearfix">
+					<img src="images/penthouse-with-bar.png" alt="Modern penthouse bar" class="thumbnail">
+					<h2>Lunch Meal</h2>
+<!--					<p class="desc">Rental located in New York City, NY. 1 bedroom 1 bath.</p>
+					
+					<span class="price">$1,800/month</span>-->
+				</li></a>
+				
+				<!-- row 03 -->
+				<a href="" style="text-decoration: none;"><li class="clearfix">
+					<img src="images/circular-apartment.png" alt="An adventure room with sofa" class="thumbnail">
+					<h2>Calendar</h2>
+<!--					<p class="desc">Rental located in New York City, NY. 1 bedroom 2 baths.</p>
+					
+					<span class="price">$1,350/month</span>-->
+				</li></a>
+				
+				<!-- row 04 -->
+				<a href="" style="text-decoration: none;"><li class="clearfix">
+					<img src="images/modern-castle-kitchen.png" alt="2nd story duplex apartment" class="thumbnail">
+					<h2>Athletics</h2>
+<!--					<p class="desc">Rental located in Madison, WI. 2 bedrooms 1 bath.</p>
+					
+					<span class="price">$1,650/month</span>-->
+				</li></a>
+				
+				<!-- row 05 -->
+				<a href="" style="text-decoration: none;"><li class="clearfix">
+					<img src="images/dining-room-duplex.png" alt="unique yacht-style bedroom set" class="thumbnail">
+					<h2>Parent Portal</h2>
+<!--					<p class="desc">Rental located in Los Angeles, CA. 2 bedrooms 1 bath.</p>
+					
+					<span class="price">$2,100/month</span>-->
+				</li></a>
+				
+				<!-- row 06 -->
+				<a href="" style="text-decoration: none;"><li class="clearfix">
+					<img src="images/kids-room-apartment.png" alt="big apartment with a kids room" class="thumbnail">
+					<h2>District</h2>
+<!--					<p class="desc">Rental located in New Haven, CT. 3 bedrooms 1 bath.</p>
+					
+					<span class="price">$2,850/month</span>-->
+				</li></a>
+				
+<!--				 row 07 
+				<a href="#"><li class="clearfix">
+					<img src="images/beautiful-villa-ocean.png" alt="Open circular apartment complex" class="thumbnail">
+					<h2>Circular Living Room Space 1st Floor</h2>
+					<p class="desc">Rental located in Greensboro, NC. 2 bedrooms 1 bath.</p>
+					
+					<span class="price">$1,890/month</span>
+				</li></a>
+				
+				 row 08 
+				<a href="#"><li class="clearfix">
+					<img src="images/beautiful-villa-ocean.png" alt="beautiful villa rental overlooking the ocean" class="thumbnail">
+					<h2>Beachfront Ocean Villa Rental</h2>
+					<p class="desc">Rental located in Naxos, Greece. 2 bedrooms 2 bath.</p>
+					
+					<span class="price">$2,200/month</span>
+				</li></a>-->
+			</ul>
+		</div>
+	</div>
+
+                                </div>
+
+                                </div>
+                          
+                               
+                            </div>
+                        </div>
+                        <div>
+                            <footer class="main-footer">
+                                <img src="images/blogger.png" />
+                                <img style="padding-left: 50px;" src="images/linkedin.png" />
+                                <img style="padding-left: 50px;" src="images/facebook_icon.png" />
+                                <img style="padding-left: 50px;" src="images/twitter.png" />
+<!--                                <p>Posted by: Hege Refsnes</p>
+                                <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>-->
+                             </footer>
+                        </div>
+                    </section><!-- .content-area -->
+                    
+                </section><!-- .wraapper -->
+                <!--<div class="page-overlay"><span>Please <a href="#">Login</a> to view</span></div>-->       
+      
+    </body>
+  
+</html>

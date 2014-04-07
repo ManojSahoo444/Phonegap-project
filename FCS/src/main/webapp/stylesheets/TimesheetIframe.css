@@ -1,0 +1,21 @@
+/* 
+    Document   : TimesheetIframe
+    Created on : 6 Mar, 2014, 2:52:26 PM
+    Author     : USER
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*root { 
+    display: block;
+}*/
+.IframeCalender {
+      float:left;
+      width:31%;
+      height:90%;
+    }
+    .IframeFav {
+      float:left;
+      width:66%;
+      height:90%;
+    }

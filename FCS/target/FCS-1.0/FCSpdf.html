@@ -1,0 +1,92 @@
+<!--  this is the second screen in the application that shows the process button-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="HandheldFriendly" content="true">
+<!--[if lt IE 9]>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="//code.jquery.com/jquery-2.0.3.js"></script>
+<!--<![endif]-->
+           <title>FCS</title>
+<!--        [if IE]
+            <link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        [endif]-->
+        <script type="text/javascript" charset="utf-8" src="js/frameworks/jquery-2.0.3.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/frameworks/datajs-1.1.1.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/frameworks/jquery-1.9.1.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/frameworks/jquery-ui-1.10.3.custom.js"></script>
+        <link href="stylesheets/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" charset="utf-8" src="js/gulfmark/Controller.js?version=1.0.0.2"></script>
+        <script type="text/javascript" charset="utf-8" src="js/frameworks/json2.js"></script>
+        <link href="stylesheets/TimesheetIframe.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        
+    </head>
+
+
+    <body>
+        <div class="section-loader"></div>
+       <img src="images/section-loader.gif" id="section-loaderconf" style="display:none;"/>
+       
+            <div class="mainContainer">
+            <div class="wrapperClass">
+                <section id="detailsWrapper" class="wrapper">
+                    <link href="stylesheets/invoice-details.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                    <link href="stylesheets/invoice-home.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                    <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+                    <link href="stylesheets/screenC.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                    <link href="stylesheets/fonts.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                    <link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                    <link href="stylesheets/invoice-details.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                    <link href="stylesheets/model.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                    <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+                    <header class="info-bar">
+                        <a id="back" onclick="location.href='FCSHome.html'" class="back-btn" style="top: 15px;">Back</a>
+                        Fulton County
+                    
+                    </header>
+<!--                    <div id="heading2" class="info-bar" style="text-align: center;">Fulton County
+                    </div> .info-bar -->
+                    <section class="content-area">
+                        
+                             <div class="content-container clearfix" style="overflow-y: scroll;padding:0px ! important;">
+                                 <div class="graph-outline" style="max-width:100%">
+                                     <iframe class="IframeCalender" src="http://50.194.79.188:8080/FCS-1.0/SAMPLE MONDAY LUNCH MENU.pdf" style="width:100%; height:700px;" frameborder="0"></iframe>
+<!--    <object style="max-width:90%;height:550px;! important" data="http://192.168.2.133:8080/FCS-1.0/SAMPLE MONDAY LUNCH MENU.pdf?#view=fitW&scrollbar=0&toolbar=0&navpanes=0" type="application/pdf">
+    <embed src="http://192.168.2.133:8080/FCS-1.0/SAMPLE MONDAY LUNCH MENU.pdf?#zoom=85&scrollbar=0&toolbar=0&navpanes=0" type="application/pdf" />
+    </object>-->
+</div>
+                            <div class="scrollable-area" id="maindivconf" style="height: initial;">
+                                
+                                <div class="invoice-container clearfix">
+                                </div>
+                                
+                                
+                                
+                           </div>
+                          </div>
+                       
+                    </section><!-- .content-area -->
+                    <div class="model-screen">
+                        <div class="model-container">
+                            <header><span id="header">Logout</span></header>
+                            <div class="model-body clearfix">
+                                <h5 id="alertMessage">Are you sure you want to logout?</h5>
+                                <input id="ok" type="submit" class="submit-btn" value="OK" />
+                                <input id="cancelAlert" type="submit" class="cancel-btn" value="Cancel" />
+                            </div>
+                        </div>
+                    </div><!-- .model-screen -->
+                </section><!-- .wraapper -->
+                <!--<div class="page-overlay"><span>Please <a href="#">Login</a> to view</span></div>-->
+            </div></div>
+    </body>
+</html>
